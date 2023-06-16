@@ -1,0 +1,1373 @@
+{
+	"info": {
+		"_postman_id": "aef226ed-9b1b-46d0-92b1-f5f5844bc281",
+		"name": "Products API",
+		"description": "A Simple Products API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/search - Search for Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "flagship",
+							"disabled": true
+						},
+						{
+							"key": "variant_name",
+							"value": "512GB",
+							"disabled": true
+						},
+						{
+							"key": "product_name",
+							"value": "pixel",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search for flagship phones with 512GB variant",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/search?description=flagship&variant_name=512GB",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "product_name",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "flagship"
+								},
+								{
+									"key": "variant_name",
+									"value": "512GB"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1347"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"543-5gJP72szvHfvmnJ0S8AEENa8zsg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:38:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"648cac2abf19b011a85aac75\",\n        \"name\": \"OnePlus 9 Pro\",\n        \"description\": \"A feature-packed flagship phone from OnePlus\",\n        \"price\": 899.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"OP9P-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 70,\n                \"_id\": \"648cac2abf19b011a85aac76\"\n            },\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"OP9P-256GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 50,\n                \"_id\": \"648cac2abf19b011a85aac77\"\n            },\n            {\n                \"name\": \"512GB\",\n                \"SKU\": \"OP9P-512GB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 25,\n                \"_id\": \"648cac2abf19b011a85aac78\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac79\",\n        \"name\": \"Xiaomi Mi 11\",\n        \"description\": \"A flagship phone with high-performance features\",\n        \"price\": 799.99,\n        \"variants\": [\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"XM11-256GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 40,\n                \"_id\": \"648cac2abf19b011a85aac7a\"\n            },\n            {\n                \"name\": \"512GB\",\n                \"SKU\": \"XM11-512GB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 20,\n                \"_id\": \"648cac2abf19b011a85aac7b\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac84\",\n        \"name\": \"Motorola Edge+\",\n        \"description\": \"A flagship phone with curved-edge display\",\n        \"price\": 899.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"ME+-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 60,\n                \"_id\": \"648cac2abf19b011a85aac85\"\n            },\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"ME+-256GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 40,\n                \"_id\": \"648cac2abf19b011a85aac86\"\n            },\n            {\n                \"name\": \"512GB\",\n                \"SKU\": \"ME+-512GB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 20,\n                \"_id\": \"648cac2abf19b011a85aac87\"\n            }\n        ],\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "Search for Pixel",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/search?product_name=pixel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "flagship",
+									"disabled": true
+								},
+								{
+									"key": "variant_name",
+									"value": "512GB",
+									"disabled": true
+								},
+								{
+									"key": "product_name",
+									"value": "pixel"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "606"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25e-1lwO7O1t5tMZQB3o4BCs6pJ53lk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:39:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"648cac2abf19b011a85aac70\",\n        \"name\": \"Google Pixel 6\",\n        \"description\": \"A flagship Google smartphone\",\n        \"price\": 799.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"GP6-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 60,\n                \"_id\": \"648cac2abf19b011a85aac71\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac72\",\n        \"name\": \"Google Pixel 7\",\n        \"description\": \"A flagship Google smartphone\",\n        \"price\": 899.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"GP7-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 60,\n                \"_id\": \"648cac2abf19b011a85aac73\"\n            },\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"GP7-256GB-01\",\n                \"additional_cost\": 50,\n                \"stock_count\": 30,\n                \"_id\": \"648cac2abf19b011a85aac74\"\n            }\n        ],\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "Product not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/search?variant_name=2TB",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "flagship",
+									"disabled": true
+								},
+								{
+									"key": "variant_name",
+									"value": "2TB"
+								},
+								{
+									"key": "product_name",
+									"value": "pixel",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4e-au3dnFesQlkCWKz6DL+WgPdYpTc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:48:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"No Products found with selected search criteria\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/products - Get all Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4667"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"123b-dKSwZnlFevvj7ZlypphoCjpFiCU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:41:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"648cac2abf19b011a85aac69\",\n        \"name\": \"iPhone 13\",\n        \"description\": \"The latest iPhone with advanced features\",\n        \"price\": 999.99,\n        \"variants\": [\n            {\n                \"name\": \"64GB\",\n                \"SKU\": \"IP13-64GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 100,\n                \"_id\": \"648cac2abf19b011a85aac6a\"\n            },\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"IP13-128GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 75,\n                \"_id\": \"648cac2abf19b011a85aac6b\"\n            },\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"IP13-256GB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 50,\n                \"_id\": \"648cac2abf19b011a85aac6c\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac6d\",\n        \"name\": \"Samsung Galaxy S21\",\n        \"description\": \"A powerful Android smartphone\",\n        \"price\": 899.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"SGS21-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 80,\n                \"_id\": \"648cac2abf19b011a85aac6e\"\n            },\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"SGS21-256GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 60,\n                \"_id\": \"648cac2abf19b011a85aac6f\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac70\",\n        \"name\": \"Google Pixel 6\",\n        \"description\": \"A flagship Google smartphone\",\n        \"price\": 799.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"GP6-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 60,\n                \"_id\": \"648cac2abf19b011a85aac71\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac72\",\n        \"name\": \"Google Pixel 7\",\n        \"description\": \"A flagship Google smartphone\",\n        \"price\": 899.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"GP7-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 60,\n                \"_id\": \"648cac2abf19b011a85aac73\"\n            },\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"GP7-256GB-01\",\n                \"additional_cost\": 50,\n                \"stock_count\": 30,\n                \"_id\": \"648cac2abf19b011a85aac74\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac75\",\n        \"name\": \"OnePlus 9 Pro\",\n        \"description\": \"A feature-packed flagship phone from OnePlus\",\n        \"price\": 899.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"OP9P-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 70,\n                \"_id\": \"648cac2abf19b011a85aac76\"\n            },\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"OP9P-256GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 50,\n                \"_id\": \"648cac2abf19b011a85aac77\"\n            },\n            {\n                \"name\": \"512GB\",\n                \"SKU\": \"OP9P-512GB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 25,\n                \"_id\": \"648cac2abf19b011a85aac78\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac79\",\n        \"name\": \"Xiaomi Mi 11\",\n        \"description\": \"A flagship phone with high-performance features\",\n        \"price\": 799.99,\n        \"variants\": [\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"XM11-256GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 40,\n                \"_id\": \"648cac2abf19b011a85aac7a\"\n            },\n            {\n                \"name\": \"512GB\",\n                \"SKU\": \"XM11-512GB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 20,\n                \"_id\": \"648cac2abf19b011a85aac7b\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac7c\",\n        \"name\": \"LG V60 ThinQ\",\n        \"description\": \"A dual-screen smartphone with advanced audio capabilities\",\n        \"price\": 699.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"LGV60-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 50,\n                \"_id\": \"648cac2abf19b011a85aac7d\"\n            },\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"LGV60-256GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 30,\n                \"_id\": \"648cac2abf19b011a85aac7e\"\n            },\n            {\n                \"name\": \"512GB\",\n                \"SKU\": \"LGV60-512GB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 15,\n                \"_id\": \"648cac2abf19b011a85aac7f\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac80\",\n        \"name\": \"Sony Xperia 1 III\",\n        \"description\": \"A high-end smartphone with a stunning display\",\n        \"price\": 1099.99,\n        \"variants\": [\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"SXP1III-256GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 40,\n                \"_id\": \"648cac2abf19b011a85aac81\"\n            },\n            {\n                \"name\": \"512GB\",\n                \"SKU\": \"SXP1III-512GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 20,\n                \"_id\": \"648cac2abf19b011a85aac82\"\n            },\n            {\n                \"name\": \"1TB\",\n                \"SKU\": \"SXP1III-1TB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 10,\n                \"_id\": \"648cac2abf19b011a85aac83\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac84\",\n        \"name\": \"Motorola Edge+\",\n        \"description\": \"A flagship phone with curved-edge display\",\n        \"price\": 899.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"ME+-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 60,\n                \"_id\": \"648cac2abf19b011a85aac85\"\n            },\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"ME+-256GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 40,\n                \"_id\": \"648cac2abf19b011a85aac86\"\n            },\n            {\n                \"name\": \"512GB\",\n                \"SKU\": \"ME+-512GB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 20,\n                \"_id\": \"648cac2abf19b011a85aac87\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac88\",\n        \"name\": \"Huawei P40 Pro\",\n        \"description\": \"A powerful smartphone with an exceptional camera\",\n        \"price\": 899.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"HWP40P-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 70,\n                \"_id\": \"648cac2abf19b011a85aac89\"\n            },\n            {\n                \"name\": \"512GB\",\n                \"SKU\": \"HWP40P-512GB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 25,\n                \"_id\": \"648cac2abf19b011a85aac8a\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"648cac2abf19b011a85aac8b\",\n        \"name\": \"Nokia 9 PureView\",\n        \"description\": \"A phone with a unique penta-camera system\",\n        \"price\": 699.99,\n        \"variants\": [\n            {\n                \"name\": \"128GB\",\n                \"SKU\": \"NK9PV-128GB-01\",\n                \"additional_cost\": 0,\n                \"stock_count\": 50,\n                \"_id\": \"648cac2abf19b011a85aac8c\"\n            },\n            {\n                \"name\": \"256GB\",\n                \"SKU\": \"NK9PV-256GB-01\",\n                \"additional_cost\": 100,\n                \"stock_count\": 30,\n                \"_id\": \"648cac2abf19b011a85aac8d\"\n            },\n            {\n                \"name\": \"512GB\",\n                \"SKU\": \"NK9PV-512GB-01\",\n                \"additional_cost\": 200,\n                \"stock_count\": 15,\n                \"_id\": \"648cac2abf19b011a85aac8e\"\n            }\n        ],\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/products/{id} - Get a particular product by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"648cac2abf19b011a85aac69"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get a particular product by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac69"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "476"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1dc-y4LsqZUCdSd0pv8sHLIgnOBfQDk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:42:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"648cac2abf19b011a85aac69\",\n    \"name\": \"iPhone 13\",\n    \"description\": \"The latest iPhone with advanced features\",\n    \"price\": 999.99,\n    \"variants\": [\n        {\n            \"name\": \"64GB\",\n            \"SKU\": \"IP13-64GB-01\",\n            \"additional_cost\": 0,\n            \"stock_count\": 100,\n            \"_id\": \"648cac2abf19b011a85aac6a\"\n        },\n        {\n            \"name\": \"128GB\",\n            \"SKU\": \"IP13-128GB-01\",\n            \"additional_cost\": 100,\n            \"stock_count\": 75,\n            \"_id\": \"648cac2abf19b011a85aac6b\"\n        },\n        {\n            \"name\": \"256GB\",\n            \"SKU\": \"IP13-256GB-01\",\n            \"additional_cost\": 200,\n            \"stock_count\": 50,\n            \"_id\": \"648cac2abf19b011a85aac6c\"\n        }\n    ],\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Product not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac63",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac63"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-onvVRwX+yoWBsgpgVJFFey0qxTU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:49:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Product not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/products - Add a new Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Vivo X60 Pro\",\r\n  \"description\": \"A flagship smartphone with advanced camera technology\",\r\n  \"price\": 899.99,\r\n  \"variants\": [\r\n    {\r\n      \"name\": \"128GB\",\r\n      \"SKU\": \"VX60P-128GB-01\",\r\n      \"additional_cost\": 0,\r\n      \"stock_count\": 50\r\n    },\r\n    {\r\n      \"name\": \"256GB\",\r\n      \"SKU\": \"VX60P-256GB-01\",\r\n      \"additional_cost\": 100,\r\n      \"stock_count\": 30\r\n    },\r\n    {\r\n      \"name\": \"512GB\",\r\n      \"SKU\": \"VX60P-512GB-01\",\r\n      \"additional_cost\": 200,\r\n      \"stock_count\": 20\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add a new Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Vivo X60 Pro\",\r\n  \"description\": \"A flagship smartphone with advanced camera technology\",\r\n  \"price\": 899.99,\r\n  \"variants\": [\r\n    {\r\n      \"name\": \"128GB\",\r\n      \"SKU\": \"VX60P-128GB-01\",\r\n      \"additional_cost\": 0,\r\n      \"stock_count\": 50\r\n    },\r\n    {\r\n      \"name\": \"256GB\",\r\n      \"SKU\": \"VX60P-256GB-01\",\r\n      \"additional_cost\": 100,\r\n      \"stock_count\": 30\r\n    },\r\n    {\r\n      \"name\": \"512GB\",\r\n      \"SKU\": \"VX60P-512GB-01\",\r\n      \"additional_cost\": 200,\r\n      \"stock_count\": 20\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "496"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f0-SQnujw4N8LMcSFiqeJ9k3TbcWs0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:46:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Vivo X60 Pro\",\n    \"description\": \"A flagship smartphone with advanced camera technology\",\n    \"price\": 899.99,\n    \"variants\": [\n        {\n            \"name\": \"128GB\",\n            \"SKU\": \"VX60P-128GB-01\",\n            \"additional_cost\": 0,\n            \"stock_count\": 50,\n            \"_id\": \"648cbc05dc33040a6c5b86fc\"\n        },\n        {\n            \"name\": \"256GB\",\n            \"SKU\": \"VX60P-256GB-01\",\n            \"additional_cost\": 100,\n            \"stock_count\": 30,\n            \"_id\": \"648cbc05dc33040a6c5b86fd\"\n        },\n        {\n            \"name\": \"512GB\",\n            \"SKU\": \"VX60P-512GB-01\",\n            \"additional_cost\": 200,\n            \"stock_count\": 20,\n            \"_id\": \"648cbc05dc33040a6c5b86fe\"\n        }\n    ],\n    \"_id\": \"648cbc05dc33040a6c5b86fb\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Trying to add duplicate",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Vivo X60 Pro\",\r\n  \"description\": \"A flagship smartphone with advanced camera technology\",\r\n  \"price\": 899.99,\r\n  \"variants\": [\r\n    {\r\n      \"name\": \"128GB\",\r\n      \"SKU\": \"VX60P-128GB-01\",\r\n      \"additional_cost\": 0,\r\n      \"stock_count\": 50\r\n    },\r\n    {\r\n      \"name\": \"256GB\",\r\n      \"SKU\": \"VX60P-256GB-01\",\r\n      \"additional_cost\": 100,\r\n      \"stock_count\": 30\r\n    },\r\n    {\r\n      \"name\": \"512GB\",\r\n      \"SKU\": \"VX60P-512GB-01\",\r\n      \"additional_cost\": 200,\r\n      \"stock_count\": 20\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "75"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4b-aGO01+ajQbja4w4jKtUNMBXOE5c\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:49:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"Trying to inset duplicate name: Vivo X60 Pro\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/products/${id}/variant - Add a variant to a product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"2TB\",\r\n    \"SKU\": \"IP60P-2TB-01\",\r\n    \"additional_cost\": 500,\r\n    \"stock_count\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69/variant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"648cac2abf19b011a85aac69",
+						"variant"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add a variant to a product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"2TB\",\r\n    \"SKU\": \"IP60P-2TB-01\",\r\n    \"additional_cost\": 500,\r\n    \"stock_count\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69/variant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac69",
+								"variant"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6b-Y6r+W0WFy9DWT4JnoQvcF1FvAyo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:53:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"648cbdcddc33040a6c5b8749\",\n    \"name\": \"2TB\",\n    \"SKU\": \"IP60P-2TB-01\",\n    \"additional_cost\": 500,\n    \"stock_count\": 20\n}"
+				},
+				{
+					"name": "Trying to add duplicate SKU",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"2TB\",\r\n    \"SKU\": \"IP60P-2TB-01\",\r\n    \"additional_cost\": 500,\r\n    \"stock_count\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69/variant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac69",
+								"variant"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "117"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"75-CT2VJJ4/uc9WlZgS0aZxmsoy0sY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:54:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"Product validation failed: variants: Possibly duplicate SKU detected in variants array\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/products/${id} - Update a product by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Google Pixel 6\",\r\n    \"description\": \"A flagship smartphone with advanced camera technology\",\r\n    \"price\": 999.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"648cac2abf19b011a85aac69"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update a product by ID",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iPhone 13\",\r\n    \"description\": \"A flagship smartphone with advanced camera technology\",\r\n    \"price\": 999.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac69"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "597"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"255-HnwephF28WJmREC1KNfgybPNJT8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:57:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"648cac2abf19b011a85aac69\",\n    \"name\": \"iPhone 13\",\n    \"description\": \"A flagship smartphone with advanced camera technology\",\n    \"price\": 999.99,\n    \"variants\": [\n        {\n            \"name\": \"64GB\",\n            \"SKU\": \"IP13-64GB-01\",\n            \"additional_cost\": 0,\n            \"stock_count\": 100,\n            \"_id\": \"648cac2abf19b011a85aac6a\"\n        },\n        {\n            \"name\": \"128GB\",\n            \"SKU\": \"IP13-128GB-01\",\n            \"additional_cost\": 100,\n            \"stock_count\": 75,\n            \"_id\": \"648cac2abf19b011a85aac6b\"\n        },\n        {\n            \"name\": \"256GB\",\n            \"SKU\": \"IP13-256GB-01\",\n            \"additional_cost\": 200,\n            \"stock_count\": 50,\n            \"_id\": \"648cac2abf19b011a85aac6c\"\n        },\n        {\n            \"name\": \"2TB\",\n            \"SKU\": \"IP60P-2TB-01\",\n            \"additional_cost\": 500,\n            \"stock_count\": 20,\n            \"_id\": \"648cbdcddc33040a6c5b8749\"\n        }\n    ],\n    \"__v\": 1\n}"
+				},
+				{
+					"name": "Trying to modify name to a already existing product",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Google Pixel 6\",\r\n    \"description\": \"A flagship smartphone with advanced camera technology\",\r\n    \"price\": 999.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac69"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"53-ShOU+t445sn2E2cKjL2n5X9mcVc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 19:58:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"There already is a product with name: Google Pixel 6\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/products/${pid}/variant/${vid} - Updates a variant of specified product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"2.5TB\",\r\n    \"SKU\": \"IP60P-2.5TB-01\",\r\n    \"additional_cost\": 600,\r\n    \"stock_count\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69/variant/648cbdcddc33040a6c5b8749",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"648cac2abf19b011a85aac69",
+						"variant",
+						"648cbdcddc33040a6c5b8749"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Updates variant of specified product",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"2.5TB\",\r\n    \"SKU\": \"IP60P-2.5TB-01\",\r\n    \"additional_cost\": 600,\r\n    \"stock_count\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69/variant/648cbdcddc33040a6c5b8749",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac69",
+								"variant",
+								"648cbdcddc33040a6c5b8749"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6f-IvZ+65PMdOhbit1iojJDve+eN4U\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 20:01:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"2.5TB\",\n    \"SKU\": \"IP60P-2.5TB-01\",\n    \"additional_cost\": 600,\n    \"stock_count\": 50,\n    \"_id\": \"648cbdcddc33040a6c5b8749\"\n}"
+				},
+				{
+					"name": "Trying to update and set a duplicate SKU",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"2.5TB\",\r\n    \"SKU\": \"SGS21-128GB-01\",\r\n    \"additional_cost\": 600,\r\n    \"stock_count\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69/variant/648cbdcddc33040a6c5b8749",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac69",
+								"variant",
+								"648cbdcddc33040a6c5b8749"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4e-HOtjZxXabfnuMKv0Tk9w2T3TfDc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 20:03:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"There already is a variants.SKU: SGS21-128GB-01\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/products/${id} - Deletes a product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"648cac2abf19b011a85aac69"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete a product",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac69"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "601"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"259-lwYjk6BusFSM64TL1bdEWvxmx+I\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 20:05:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"648cac2abf19b011a85aac69\",\n    \"name\": \"iPhone 13\",\n    \"description\": \"A flagship smartphone with advanced camera technology\",\n    \"price\": 999.99,\n    \"variants\": [\n        {\n            \"name\": \"64GB\",\n            \"SKU\": \"IP13-64GB-01\",\n            \"additional_cost\": 0,\n            \"stock_count\": 100,\n            \"_id\": \"648cac2abf19b011a85aac6a\"\n        },\n        {\n            \"name\": \"128GB\",\n            \"SKU\": \"IP13-128GB-01\",\n            \"additional_cost\": 100,\n            \"stock_count\": 75,\n            \"_id\": \"648cac2abf19b011a85aac6b\"\n        },\n        {\n            \"name\": \"256GB\",\n            \"SKU\": \"IP13-256GB-01\",\n            \"additional_cost\": 200,\n            \"stock_count\": 50,\n            \"_id\": \"648cac2abf19b011a85aac6c\"\n        },\n        {\n            \"name\": \"2.5TB\",\n            \"SKU\": \"IP60P-2.5TB-01\",\n            \"additional_cost\": 600,\n            \"stock_count\": 50,\n            \"_id\": \"648cbdcddc33040a6c5b8749\"\n        }\n    ],\n    \"__v\": 1\n}"
+				},
+				{
+					"name": "Trying to delete a non existing product",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac69"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-onvVRwX+yoWBsgpgVJFFey0qxTU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 20:05:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Product not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/products/${pid}/variant/${vid} - Deletes a product Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/648cac2abf19b011a85aac69",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"648cac2abf19b011a85aac69"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete a variant",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac6d/variant/648cac2abf19b011a85aac6f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac6d",
+								"variant",
+								"648cac2abf19b011a85aac6f"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6f-vHSa/sgT3CDKe9/yCDkl8+iPuro\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 20:07:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"256GB\",\n    \"SKU\": \"SGS21-256GB-01\",\n    \"additional_cost\": 100,\n    \"stock_count\": 60,\n    \"_id\": \"648cac2abf19b011a85aac6f\"\n}"
+				},
+				{
+					"name": "Trying to delete a non existing variant",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/648cac2abf19b011a85aac6d/variant/648cac2abf19b011a85aac6f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"648cac2abf19b011a85aac6d",
+								"variant",
+								"648cac2abf19b011a85aac6f"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-E/uaMHed2KdaaPS/Gc6/wTrtArM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Jun 2023 20:07:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Variant not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/resetdb - Just a helper path to reset db state",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/resetdb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"resetdb"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
